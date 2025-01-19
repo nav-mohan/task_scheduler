@@ -21,7 +21,7 @@ std::chrono::system_clock::time_point getMidnight() {
 
     std::chrono::time_point nextExecutionTimePoint = std::chrono::system_clock::from_time_t(std::mktime(&localTime));
     if(nextExecutionTimePoint <= now) 
-        nextExecutionTimePoint += std::chrono::minutes(15);
+        nextExecutionTimePoint += std::chrono::hours(24);
     std::cout << "Current time : " << std::chrono::system_clock::to_time_t(now) << std::endl;
     std::cout << "Next Task at : " << std::chrono::system_clock::to_time_t(nextExecutionTimePoint) << std::endl;
 
